@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'Exo2';
+    src: url('../fonts/Exo2Regular/Exo2Regular.eot');
+    src: url('../fonts/Exo2Regular/Exo2Regular.woff') format('woff'),
+         url('../fonts/Exo2Regular/Exo2Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Exo2';
+    src: url('../fonts/Exo2Bold/Exo2Bold.eot');
+    src: url('../fonts/Exo2Bold/Exo2Bold.woff') format('woff'),
+         url('../fonts/Exo2Bold/Exo2Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+body {
+  padding-bottom: 40px;
+}
+.container {
+  width: 1000px;
+  padding: 0;
+  font-family: Exo2, Arial, sans-serif;
+}
+.carousel {
+  height: 450px;
+  margin-top: 60px;
+}
+.carousel-caption {
+  z-index: 10;
+  top: 20px;
+  color: #424852;
+  text-align: justify;
+  text-shadow: none;
+}
+.carousel-truckIcon {
+  z-index: 10;
+  position: absolute;
+}
+.carousel-truckIcon:hover {
+  z-index: 15;
+}
+.carousel-truckIcon-innerIcon {
+  z-index: 12;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #c03f36;
+  background-image: url('../images/icons.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #c03f36;
+}
+.carousel-truckIcon-innerHover {
+  z-index: 11;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 10px; 
+  background-color: #fff;
+  min-width: 260px;
+  border: 2px solid #1b5287;
+  visibility: hidden;
+}
+.carousel-truckIcon-innerHover p {
+  margin: 0;
+  color: #424852;
+  text-align: justify;
+}
+.carousel-truckIcon:hover .carousel-truckIcon-innerIcon {
+  background-color: #1b5287;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #1b5287;
+}
+.carousel-truckIcon:hover .carousel-truckIcon-innerHover {
+  visibility: visible;
+}
+.carousel-truckIcon-1 {
+  top: 160px;
+  left: 170px;  
+}
+.carousel-truckIcon-1 .carousel-truckIcon-innerIcon {
+  background-position: -280px 0px;
+}
+.carousel-truckIcon-2 {
+  top: 150px;
+  left: 550px;  
+}
+.carousel-truckIcon-2 .carousel-truckIcon-innerIcon {
+  background-position: -308px 0px;
+}
+.carousel-truckIcon-3 {
+  top: 200px;
+  left: 420px;  
+}
+.carousel-truckIcon-3 .carousel-truckIcon-innerIcon {
+  background-position: -335px 0px;
+}
+.carousel-truckIcon-4 {
+  top: 260px;
+  left: 400px;  
+}
+.carousel-truckIcon-4 .carousel-truckIcon-innerIcon {
+  background-position: -363px 0px;
+}
+.carousel-truckIcon-5 {
+  top: 280px;
+  left: 600px;  
+}
+.carousel-truckIcon-5 .carousel-truckIcon-innerIcon {
+  background-position: -280px -25px;
+}
+.carousel-truckIcon-6 {
+  top: 280px;
+  left: 720px;  
+}
+.carousel-truckIcon-6 .carousel-truckIcon-innerIcon {
+  background-position: -308px -24px;
+}
+.carousel-truckIcon-7 {
+  top: 360px;
+  left: 860px;  
+}
+.carousel-truckIcon-7 .carousel-truckIcon-innerIcon {
+  background-position: -335px -25px; 
+}
+.carousel-truckIcon-7 .carousel-truckIcon-innerHover {
+  background-position: -335px -25px;  
+  top: -90px;
+  left: -245px;
+}
+.carousel .item {
+  height: 450px;
+  background-color: #fff;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.carousel-indicators {
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  margin-left: 0;
+}
+.carousel-indicators li {
+  width: auto;
+  height: 20px;
+  margin: 0 10px 0 10px;
+  text-indent: 0;
+  cursor: pointer;
+  color: #64828c;
+  background-color: none;
+  border: 0;
+  text-decoration: underline;
+}
+.carousel-indicators .active {
+  width: auto;
+  height: 20px;
+  margin: 0 10px 0 10px;
+  background-color: none;
+  font-weight: bold;
+  color: #426794;
+  text-decoration: none;
+}
+.carousel-control {
+  width: 30px;
+}
+.carousel-control.left {
+  background-image: none;
+}
+.carousel-control.right {
+  background-image: none;
+}
+.carousel-icon {
+  width: 30px;
+  height: 103px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  margin-top: -51px;
+  background-image: url("../images/icons.png");
+  background-repeat: no-repeat;
+}
+.carousel-icon.right {
+  background-position: -32px 0px;
+}
+.carousel-icon.left {
+  background-position: 0px 0px;
+}
+.div-circle {
+   width: 90px;
+   height: 90px;
+   display: inline-block;
+   margin: 10px;
+   background-color: #f2f6fa;
+   border-radius: 50%;
+   border: 1px solid #d4dee6;
+   background-image: url("../images/icons.png");
+   background-repeat: no-repeat;
+   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #4d709a;
+}
+.div-circle-mount {
+	background-position: -125px -5px;
+}
+.div-circle-temperature {
+	background-position: -193px -5px;
+}
+.div-circle-protect {
+	background-position: -62px -5px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: 0px;
+}
+
+.btn-primary, .btn-primary:focus, .btn-primary:active {
+   background-color: #c03f36;
+   border: 0;
+   text-transform: uppercase;
+   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #c03f36;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  background-color: #c03f36;
+}
+.btn-primary:hover {
+   background-color: #9d342c;
+   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #9d342c;
+}
+.marketing .col-md-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h3 {
+  font-weight: normal;
+}
+.marketing .col-md-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #424852;
+}
+
+.close {
+  font-family: Arial, sans-serif;
+}
+.correct-calcResult {
+	color: green;
+}
+.incorrect-calcResult {
+	color: red;
+}
