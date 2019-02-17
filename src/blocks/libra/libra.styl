@@ -1,1 +1,84 @@
 .libra
+  padding 0 15px
+  padding-top 100px
+  padding-bottom 194px
+  display flex
+  flex-direction column
+  align-items center
+
+  &__tagline
+    margin 0
+    margin-bottom 25px
+    width 777px
+
+    font-family "Exo2", "Arial", sans-serif
+    font-weight 400
+    font-size 30px
+    line-height 48px
+    text-align center
+
+  &__menu
+    margin 0
+    margin-bottom 39px
+
+  &__slider
+    margin 0
+    margin-bottom 184px
+
+  &__advantages
+    width 100%
+    max-width 1010px
+    margin 0 auto
+    margin-bottom 42px
+    padding 0
+    display flex
+    justify-content space-between
+
+    list-style none
+
+  &__advantages-item
+    position relative
+
+    &::before,
+    &::after
+      content ""
+      position absolute
+      top -133px
+      left 50%
+
+      width 108px
+      height 108px
+
+      transform translateX(-50%)
+
+    &::before
+      background-color #f2f6fa
+      border-radius 50%
+      border 2px solid #5559a1
+      box-shadow:
+        inset 0 0 0 6px #ffffff,
+        inset 0 0 0 7px #d1dbe4
+
+    &::after
+      background-repeat no-repeat
+      background-position 50% 50%
+
+    &--installation::after
+      background-image url(../img/installation.svg)
+
+    &--temperature::after
+      background-image url(../img/temperature.svg)
+
+    &--lightning::after
+      background-image url(../img/lightning.svg)
+
+    p
+      width 268px
+      margin 0
+
+      font-family "Exo2", "Arial", sans-serif
+      font-weight 400
+      font-size 18px
+      line-height 24px
+      color #424852
+      text-align center
