@@ -109,6 +109,9 @@ gulp.task("imagesOpti", function() {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
+    .pipe(rename({
+      dirname: ""
+    }))
     .pipe(gulp.dest(paths.images.dest))
     .pipe(server.reload({
       stream: true
