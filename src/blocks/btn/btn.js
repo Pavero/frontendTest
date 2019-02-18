@@ -1,5 +1,5 @@
 $(".js-btn").click(function() {
-  $.getJSON("../test.json", function(data) {
+  $.getJSON("../ajax.php", function(data) {
     $(".modal").fadeIn("fast");
     if (data["status"] === true) {
       $(".modal").addClass("modal--success");
