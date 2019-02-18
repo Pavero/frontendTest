@@ -1,6 +1,6 @@
 $(".js-btn").click(function() {
   $.getJSON("../test.json", function(data) {
-    $(".modal").fadeToggle("fast");
+    $(".modal").fadeIn("fast");
     if (data["status"] === true) {
       $(".modal").addClass("modal--success");
     } else {
@@ -11,7 +11,7 @@ $(".js-btn").click(function() {
 });
 
 $(".js-modal-close").click(function() {
-  $(".modal").fadeToggle("fast")
+  $(".modal").fadeOut("fast")
     .removeClass("modal--success")
     .removeClass("modal--error");
   $(".modal__text").text("");
