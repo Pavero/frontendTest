@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Master-test</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css" />
+		<!--[if lt IE 9]>
+			<script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3,respond@1.4.2"></script>
+			<link rel="stylesheet" type="text/css" media="all" href="css/ie.css"/>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<h1 class="header__title"><b>Цифровые</b> автомобильные весы НПП &quot;МЕТРА&quot; на 100% защищают вашу прибыль от потерь</h1>
+
+					<div class="slider">
+						<div class="container">
+							<nav class="slider__tabs menu">
+								<ul class="menu__list">
+									<li class="menu__item"><a class="menu__link" href="#specifications">Технические характеристики</a></li>
+									<li class="menu__item"><a class="menu__link" href="#lineup">Весь модельный ряд</a></li>
+									<li class="menu__item"><a class="menu__link" href="#supply">Комплектность поставки</a></li>
+									<li class="menu__item"><a class="menu__link" href="#certification">Сертификация</a></li>
+								</ul>
+							</nav>
+							<div class="owl-carousel owl-theme">
+							
+								<div class="slider__block" data-hash="specifications">Первая страница - Технические характеристики</div>
+
+								<div class="slider__block" data-hash="lineup"> 
+									<div class="slider__truck"><img src="images/truck.jpg"/>
+										<div class="mark__item item-1">
+											<div class="mark__item-img"></div>
+											<div class="mark__item-desc">Максимальная нагрузка - <b>от 15 до 40 т</b></div>
+										</div>
+										<div class="mark__item item-2">
+											<div class="mark__item-img"></div>
+											<div class="mark__item-desc">2. Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod</div>
+										</div>
+										<div class="mark__item item-3">
+											<div class="mark__item-img"></div>
+											<div class="mark__item-desc">3. Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod</div>
+										</div>
+										<div class="mark__item item-4">
+											<div class="mark__item-img"></div>
+											<div class="mark__item-desc">4. Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod</div>
+										</div>
+										<div class="mark__item item-5">
+											<div class="mark__item-img"></div>
+											<div class="mark__item-desc">5. Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod</div>
+										</div>
+										<div class="mark__item item-6">
+											<div class="mark__item-img"></div>
+											<div class="mark__item-desc">6. Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod</div>
+										</div>
+										<div class="mark__item item-7">
+											<div class="mark__item-img"></div>
+											<div class="mark__item-desc">7. Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="slider__block" data-hash="supply">Третья страница - Комплектность поставки</div>
+								<div class="slider__block" data-hash="certification">Четвертая страница - Сертификация</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="advantages">
+						<div class="advantages__block installation">
+							<div class="advantages__block-img"></div>
+							<div class="advantages__block-desc">Монтаж<br>осуществляется<br>в течение 1 дня</div>
+						</div>
+						<div class="advantages__block temperature">
+							<div class="advantages__block-img"></div>
+							<div class="advantages__block-desc">Работа при темпаратурах<br>от -30 до +40<br>градусов по цельсию</div>
+						</div>
+						<div class="advantages__block lightning-protection">
+							<div class="advantages__block-img"></div>
+							<div class="advantages__block-desc">Каждый датчик<br>имеет специальную плату,<br>обеспечивающую грозозащиту</div>
+						</div>
+					</div>
+					<div class="total">
+						<button class="js-res">
+							<div class="button__border">
+								<div class="total__button">Получить расчет</div>
+							</div>
+						</button>
+						<div class="message"></div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+
+		<!--script type="text/javascript">
+			$(document).ready(function(){
+				$('.owl-carousel').owlCarousel({
+					loop:true,
+					nav:true,
+					navText: ["<div class='slider__nav nav__prev'></div>","<div class='slider__nav nav__next'></div>"],
+					touchDrag:false,
+					mouseDrag:false,
+					items: 1,
+					URLhashListener:true,
+					startPosition: 'URLHash',
+					margin:500,
+					startPosition:1
+				});
+			});
+		</script>
+		
+		<script type="text/javascript">
+		function message()
+		{
+			$.getJSON("ajax.php", function(data) {
+				var string = "";
+				var res = [];
+				$.each(data, function(key, val) {
+					string = val;
+					res.push(string);
+				});
+				$(".message").html(res[0]);
+
+				if (res[1] == true) {
+					$(".message").css({"color" : "green"});
+				} else {
+					$(".message").css({"color" : "red"});
+				};
+			});
+		}
+
+		$(".js-res").on("click", function() {
+			message();
+		});
+
+	</script-->
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
