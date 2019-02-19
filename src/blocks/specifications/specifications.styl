@@ -22,6 +22,8 @@
     top 0
     left 0
 
+    outline none
+
     &--pos-mod1
       top 190px
       left 660px
@@ -56,6 +58,14 @@
     left -18px
     z-index 1
 
+    width 43px
+    height 43px
+
+    background-color #c03f36
+    border 1px solid #c03f36
+    border-radius 50%
+    box-shadow inset 0 0 0 4px #ffffff
+
   &__text
     width 1px
     height 1px
@@ -71,7 +81,8 @@
     border 0
     overflow hidden
 
-  &__item:hover &__text
+  &__item:hover &__text,
+  &__item:focus &__text
     width auto
     height auto
     margin 0
@@ -79,3 +90,8 @@
 
     border 2px solid #1b5287
     transition 0.1s linear
+
+  &__item:hover &__mark,
+  &__item:focus &__mark
+    background-color #1b5287
+    border-color #1b5287
