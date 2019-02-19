@@ -1,0 +1,126 @@
+.specifications
+  &__wrapper
+    position relative
+
+  &__img
+    display block
+
+  &__list
+    position absolute
+    top 0
+    left 0
+
+    width 100%
+    height 100%
+    margin 0
+    padding 0
+
+    list-style none
+
+  &__item
+    position absolute
+    top 0
+    left 0
+
+    outline none
+
+    &--pos-mod1
+      top 36%
+      left 58%
+
+    &--pos-mod2
+      top 35.1%
+      left 10.11%
+
+    &--pos-mod3
+      top 45.5%
+      left 40.34%
+
+    &--pos-mod4
+      top 61.48%
+      left 38.14%
+
+    &--pos-mod5
+      top 67.74%
+      left 62.83%
+
+    &--pos-mod6
+      top 66.79%
+      left 76.89%
+
+    &--pos-mod7
+      top 81.97%
+      left 92.27%
+
+  &__mark
+    position absolute
+    top -8px
+    left -18px
+    z-index 1
+
+    width 43px
+    height 43px
+
+    border 1px solid #c03f36
+    border-radius 50%
+    background-color #c03f36
+    background-repeat no-repeat
+    box-shadow inset 0 0 0 4px #ffffff
+
+    &--icon-mod1
+      background-image url("../img/truck.png")
+      background-position 50% 55%
+
+    &--icon-mod2
+      background-image url("../img/road.png")
+      background-position 50% 45%
+
+    &--icon-mod3
+      background-image url("../img/cabin.png")
+      background-position 50% 48%
+
+    &--icon-mod4
+      background-image url("../img/arrow.png")
+      background-position 50% 48%
+
+    &--icon-mod5
+      background-image url("../img/plus.png")
+      background-position 48% 48%
+
+    &--icon-mod6
+      background-image url("../img/scales.png")
+      background-position 50% 48%
+
+    &--icon-mod7
+      background-image url("../img/arrow-rotate.png")
+      background-position 50% 48%
+
+  &__text
+    width 1px
+    height 1px
+    margin -1px
+
+    font-family "Exo2", "Arial", sans-serif
+    font-weight 400
+    font-size 18px
+    line-height 24px
+    color #1b5287
+
+    background-color #ffffff
+    border 0
+    overflow hidden
+
+  &__item:hover &__text,
+  &__item:focus &__text
+    width auto
+    height auto
+    margin 0
+    padding 18px 16px
+
+    border 2px solid #1b5287
+    transition 0.1s linear
+
+  &__item:hover &__mark,
+  &__item:focus &__mark
+    background-color #1b5287
+    border-color #1b5287
