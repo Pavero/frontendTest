@@ -33,7 +33,7 @@ var paths = {
   js: {
     src: ["./node_modules/jquery/dist/jquery.min.js", "./src/js/plugins/*.js", "./src/blocks/**/*.js", "./src/js/*.js"],
     dest: "./build/js",
-    watch: ["./src/blocks/**/*.js", ".src/js/**/*.js"]
+    watch: ["./src/blocks/**/*.js", "./src/js/**/*.js"]
   },
   images: {
     src: "./src/blocks/**/img/",
