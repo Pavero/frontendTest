@@ -1,0 +1,60 @@
+@font-face {
+  font-family: Exo2Bold;
+  src: url("../fonts/Exo2Bold.eot");
+  src: url("../fonts/Exo2Bold.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Exo2Bold.woff") format("woff");
+  src: url("../fonts/Exo2Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Exo2Regular;
+  src: url("../fonts/Exo2Regular.eot");
+  src: url("../fonts/Exo2Regular.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Exo2Regular.woff") format("woff");
+  src: url("../fonts/Exo2Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+  font-family: Exo2Regular;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: unset;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+.app {
+  margin: 4.41176vw 11.76471vw;
+  width: 76.47059vw;
+}
+
+.title {
+  font-size: 2em;
+  padding: 0 14.70588vw;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.title__bold {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .app {
+    margin: 2.94118vw;
+    width: 94.11765vw;
+  }
+
+  .title {
+    padding: 0;
+  }
+}

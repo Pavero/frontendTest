@@ -1,0 +1,59 @@
+@mixin addFont ($fontName)
+    font-family: $fontName
+    src: url('../fonts/'+$fontName+'.eot')
+    src: url('../fonts/'+$fontName+'.eot?#iefix') format('embedded-opentype')
+    src: url('../fonts/'+$fontName+'.woff') format('woff')
+    src: url('../fonts/'+$fontName+'.ttf') format('truetype')
+@font-face 
+    @include addFont(Exo2Bold)
+@font-face 
+    @include addFont(Exo2Regular)
+//<сетка>
+$columns: 34
+$atom: 100vw / $columns
+//</сетка>
+//<цвета>
+$grey: #d4ddeb
+$light_grey: #f7f7f7
+$black: #2f2f2f
+//</цвета>
+//<брейкпоинты>
+$extra_large: "max-width: 1350px"
+$large: "max-width: 1050px"
+$medium: "max-width: 768px"
+$small: "max-width: 480px"
+$extra_small: "max-width: 360px"
+//</брейкпоинты>
+//</теги>
+body
+    margin: 0
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)))
+    font-family: Exo2Regular
+    max-width: 100%
+h1, h2, h3
+    font-weight: unset
+    // margin: unset
+a
+    text-decoration: unset
+    color: unset
+//</теги>
+//<контейнеры>
+.app
+    margin: 1.5 * $atom 4 * $atom 
+    width: ($columns - 8) * $atom
+    @media($medium)
+        margin: $atom
+        width: ($columns - 2) * $atom
+//</контейнеры>
+//<блоки>
+.title
+    font-size: 2em
+    padding: 0 5 * $atom
+    line-height: 1.5em
+    text-align: center
+    &__bold
+        font-weight: bold
+    @media($medium)
+        padding: 0
+
+//</блоки>
