@@ -32,6 +32,40 @@ a {
   width: 76.47059vw;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  position: relative;
+  border-radius: 20vw;
+  width: 5em;
+  height: 5em;
+  margin-bottom: 1.47059vw;
+  background: #f7f7f7;
+  border: 0.5px solid #d4ddeb;
+}
+
+.circle__icon {
+  display: block;
+  height: 50%;
+  margin: 25% auto;
+}
+
+.circle::after {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  border: .5px solid black;
+  border-radius: inherit;
+  background: white;
+  z-index: -1;
+  content: "";
+}
+
 .image {
   width: 100%;
 }
@@ -106,7 +140,103 @@ a {
 }
 
 .carousel__element {
+  position: relative;
+  flex-basis: 100%;
   min-width: 100%;
+  overflow: hidden;
+}
+
+.characteristic {
+  position: relative;
+  top: -60%;
+  left: 8%;
+  width: 2vw;
+  height: 2vw;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.characteristic__circle {
+  width: 1.75vw;
+  height: 1.75vw;
+  background: red;
+}
+
+.characteristic__circle::after {
+  border: .5px solid red;
+  top: -14%;
+  left: -14%;
+  right: -14%;
+  bottom: -14%;
+}
+
+.characteristic__text {
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+  top: 50%;
+  left: 50%;
+  background: white;
+  z-index: -1;
+  padding: .75vw;
+  white-space: nowrap;
+  color: #d4ddeb;
+}
+
+.characteristic__value {
+  color: black;
+  font-family: Exo2Bold;
+}
+
+.characteristic:hover .characteristic__circle {
+  background: black;
+}
+
+.characteristic:hover .characteristic__circle::after {
+  border-color: black;
+}
+
+.characteristic:hover .characteristic__text {
+  display: block;
+}
+
+.advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15em;
+  margin: 2.94118vw;
+}
+
+.advantage__text {
+  text-align: center;
+  font-size: 1.15em;
+  line-height: 1.5em;
+}
+
+.button {
+  position: relative;
+  text-transform: uppercase;
+  color: white;
+  background: red;
+  display: inline-block;
+  font-size: 1.75em;
+  padding: .4em 1.25em;
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.button::after {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: red;
+  content: "";
+  z-index: -1;
+  border-radius: inherit;
 }
 
 @media (max-width: 768px) {
