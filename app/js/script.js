@@ -9,12 +9,12 @@ function carousel() {
     let currentSlide = 0;
 
     const container = (() => {
-        let container = carousel.querySelector(".carousel__container");
+        const container = carousel.querySelector(".carousel__container");
         container.els = container.querySelectorAll(".carousel__element");
 
         container.scroll = (index) => {
             $(container).animate({
-                scrollLeft: container.els[0].scrollWidth * index
+                scrollLeft: container.els[0].scrollWidth * index + 1//1-погрешность
             }, 200);
         };
 
@@ -22,7 +22,7 @@ function carousel() {
     })();
 
     const nav = (() => {
-        let nav = carousel.querySelector(".nav");
+        const nav = carousel.querySelector(".nav");
         nav.items = nav.querySelectorAll(".nav__item");
 
         [].forEach.call(nav.items, (item, i) => {
@@ -38,7 +38,7 @@ function carousel() {
     })();
 
     const arrows = (() => {
-        let arrows = {
+        const arrows = {
             left: carousel.querySelectorAll(".carousel__arrow")[0],
             right: carousel.querySelectorAll(".carousel__arrow")[1]
         };
@@ -65,6 +65,7 @@ function carousel() {
 
 function popup(message, status) {
     const modal = new Modal(message, status)
+    document.body.appendChild(modal)
     setTimeout(function () {
         document.body.removeChild(modal)
     }, 1000)
@@ -75,6 +76,5 @@ function Modal(message, status) {
     modal.className = "modal ";
     modal.className += status ? "--succes" : "--failure";
     modal.innerHTML = message;
-    document.body.appendChild(modal)
     return modal
 }

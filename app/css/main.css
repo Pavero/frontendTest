@@ -28,7 +28,7 @@ a {
 }
 
 .app {
-  margin: 4.41176vw 11.76471vw;
+  margin: 2.94118vw 11.76471vw;
   width: 76.47059vw;
 }
 
@@ -43,8 +43,8 @@ a {
   width: 5em;
   height: 5em;
   margin-bottom: 1.47059vw;
-  background: #f7f7f7;
-  border: 0.5px solid #d4ddeb;
+  background: #f2f6fa;
+  border: 0.5px solid #99adb3;
 }
 
 .circle__icon {
@@ -59,7 +59,7 @@ a {
   left: -10%;
   right: -10%;
   bottom: -10%;
-  border: .5px solid black;
+  border: 0.5px solid #4d709a;
   border-radius: inherit;
   background: white;
   z-index: -1;
@@ -72,13 +72,17 @@ a {
 
 .title {
   font-size: 1.75em;
-  padding: 0 16.17647vw;
+  padding: 0 5em;
   line-height: 1.5em;
   text-align: center;
 }
 
 .title__bold {
   font-weight: bold;
+}
+
+.nav {
+  color: #4d709a;
 }
 
 .nav__item {
@@ -143,13 +147,12 @@ a {
   position: relative;
   flex-basis: 100%;
   min-width: 100%;
+  max-width: 100%;
   overflow: hidden;
 }
 
 .characteristic {
-  position: relative;
-  top: -60%;
-  left: 8%;
+  position: absolute;
   width: 2vw;
   height: 2vw;
   z-index: 1;
@@ -159,45 +162,93 @@ a {
 .characteristic__circle {
   width: 1.75vw;
   height: 1.75vw;
-  background: red;
+  background: #c03f36;
 }
 
 .characteristic__circle::after {
-  border: .5px solid red;
+  border: 0.5px solid #c03f36;
   top: -14%;
   left: -14%;
   right: -14%;
   bottom: -14%;
 }
 
+.characteristic__icon {
+  filter: brightness(0) invert(1);
+}
+
 .characteristic__text {
   display: none;
   position: absolute;
-  border: 1px solid black;
+  border: 1px solid #4d709a;
   top: 50%;
   left: 50%;
   background: white;
   z-index: -1;
   padding: .75vw;
   white-space: nowrap;
-  color: #d4ddeb;
+  color: #99adb3;
+}
+
+.characteristic__text.--right {
+  left: auto;
+  right: 50%;
 }
 
 .characteristic__value {
-  color: black;
+  color: #4d709a;
   font-family: Exo2Bold;
 }
 
+.characteristic:hover {
+  z-index: 2;
+}
+
 .characteristic:hover .characteristic__circle {
-  background: black;
+  background: #4d709a;
 }
 
 .characteristic:hover .characteristic__circle::after {
-  border-color: black;
+  border-color: #4d709a;
 }
 
 .characteristic:hover .characteristic__text {
   display: block;
+}
+
+.characteristic.--n1 {
+  top: 34%;
+  left: 8%;
+}
+
+.characteristic.--n2 {
+  top: 60%;
+  left: 37%;
+}
+
+.characteristic.--n3 {
+  top: 45%;
+  left: 39%;
+}
+
+.characteristic.--n4 {
+  top: 32%;
+  left: 57%;
+}
+
+.characteristic.--n5 {
+  top: 67%;
+  left: 62%;
+}
+
+.characteristic.--n6 {
+  top: 66%;
+  left: 75.5%;
+}
+
+.characteristic.--n7 {
+  top: 80%;
+  left: 90%;
 }
 
 .advantage {
@@ -218,10 +269,10 @@ a {
   position: relative;
   text-transform: uppercase;
   color: white;
-  background: red;
+  background: #c03f36;
   display: inline-block;
   font-size: 1.75em;
-  padding: .4em 1.25em;
+  padding: .3em 1.25em;
   border-radius: 10px;
   border: 2px solid white;
   cursor: pointer;
@@ -234,7 +285,7 @@ a {
   left: -6px;
   right: -6px;
   bottom: -6px;
-  background: red;
+  background: #c03f36;
   content: "";
   z-index: -1;
   border-radius: inherit;
@@ -265,7 +316,7 @@ a {
 }
 
 .modal.--failure {
-  color: red;
+  color: #c03f36;
 }
 
 @media (max-width: 768px) {
@@ -276,5 +327,9 @@ a {
 
   .title {
     padding: 0;
+  }
+
+  .carousel__container {
+    width: 88.23529vw;
   }
 }

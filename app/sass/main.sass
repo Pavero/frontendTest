@@ -13,9 +13,10 @@ $columns: 34
 $atom: 100vw / $columns
 //</сетка>
 //<цвета>
-$grey: #d4ddeb
-$light_grey: #f7f7f7
-$black: #2f2f2f
+$grey: #99adb3
+$light_grey: #f2f6fa
+$blue: #4d709a
+$red: #c03f36
 //</цвета>
 //<брейкпоинты>
 $extra_large: "max-width: 1350px"
@@ -39,7 +40,7 @@ a
 //</теги>
 //<контейнеры>
 .app
-    margin: 1.5 * $atom 4 * $atom 
+    margin: 1 * $atom 4 * $atom 
     width: ($columns - 8) * $atom
     @media($medium)
         margin: $atom
@@ -67,7 +68,7 @@ a
         left: -10%
         right: -10%
         bottom: -10%
-        border: .5px solid black
+        border: .5px solid $blue
         border-radius: inherit
         background: white
         z-index: -1
@@ -76,7 +77,7 @@ a
     width: 100%
 .title
     font-size: 1.75em
-    padding: 0 5.5 * $atom
+    padding: 0 5em
     line-height: 1.5em
     text-align: center
     &__bold
@@ -84,6 +85,7 @@ a
     @media($medium)
         padding: 0
 .nav
+    color: $blue
     &__item
         margin: 0 1em
         &:hover
@@ -124,15 +126,16 @@ a
         display: flex
         width: 20 * $atom
         overflow-x: hidden
+        @media($medium)
+            width: 30 * $atom
     &__element
         position: relative
         flex-basis: 100%
         min-width: 100%
+        max-width: 100%
         overflow: hidden
 .characteristic
-    position: relative
-    top: -60%
-    left: 8%
+    position: absolute
     width: 2vw
     height: 2vw
     z-index: 1
@@ -140,17 +143,19 @@ a
     &__circle
         width: 1.75vw
         height: 1.75vw
-        background: red
+        background: $red
         &::after
-            border: .5px solid red
+            border: .5px solid $red
             top: -14%
             left: -14%
             right: -14%
             bottom: -14%
+    &__icon
+        filter: brightness(0) invert(1)
     &__text
         display: none
         position: absolute
-        border: 1px solid black
+        border: 1px solid $blue
         top: 50%
         left: 50%
         background: white
@@ -158,16 +163,42 @@ a
         padding: .75vw
         white-space: nowrap
         color: $grey
+        &.--right
+            left: auto
+            right: 50%
     &__value
-        color: black
+        color: $blue
         font-family: Exo2Bold
     &:hover
+        z-index: 2
         .characteristic__circle
-            background: black
+            background: $blue
             &::after
-                border-color: black
+                border-color: $blue
         .characteristic__text
             display: block
+    &.--n
+        &1
+            top: 34%
+            left: 8%
+        &2
+            top: 60%
+            left: 37%
+        &3
+            top: 45%
+            left: 39%
+        &4
+            top: 32%
+            left: 57%
+        &5
+            top: 67%
+            left: 62%
+        &6
+            top: 66%
+            left: 75.5%
+        &7
+            top: 80%
+            left: 90%
 .advantage
     display: flex
     flex-direction: column
@@ -184,10 +215,10 @@ a
     position: relative
     text-transform: uppercase
     color: white
-    background: red
+    background: $red
     display: inline-block
     font-size: 1.75em
-    padding: .4em 1.25em
+    padding: .3em 1.25em
     border-radius: 10px
     border: 2px solid white
     cursor: pointer
@@ -198,7 +229,7 @@ a
         left: -6px
         right: -6px
         bottom: -6px
-        background: red
+        background: $red
         content: ""
         z-index: -1
         border-radius: inherit
@@ -224,5 +255,5 @@ a
     &.--succes
         color: green
     &.--failure
-        color: red
+        color: $red
 //</блоки>
