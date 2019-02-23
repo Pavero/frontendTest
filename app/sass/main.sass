@@ -1,0 +1,259 @@
+@mixin addFont ($fontName)
+    font-family: $fontName
+    src: url('../fonts/'+$fontName+'.eot'),
+    url('../fonts/'+$fontName+'.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/'+$fontName+'.woff') format('woff'),
+    url('../fonts/'+$fontName+'.ttf') format('truetype'),
+@font-face 
+    @include addFont(Exo2Bold)
+@font-face 
+    @include addFont(Exo2Regular)
+//<сетка>
+$columns: 34
+$atom: 100vw / $columns
+//</сетка>
+//<цвета>
+$grey: #99adb3
+$light_grey: #f2f6fa
+$blue: #4d709a
+$red: #c03f36
+//</цвета>
+//<брейкпоинты>
+$extra_large: "max-width: 1350px"
+$large: "max-width: 1050px"
+$medium: "max-width: 768px"
+$small: "max-width: 480px"
+$extra_small: "max-width: 360px"
+//</брейкпоинты>
+//</теги>
+body
+    margin: 0
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)))
+    font-family: Exo2Regular
+    max-width: 100%
+h1, h2, h3
+    font-weight: unset
+    // margin: unset
+a
+    // text-decoration: unset
+    color: unset
+//</теги>
+//<контейнеры>
+.app
+    margin: 1 * $atom 4 * $atom 
+    width: ($columns - 8) * $atom
+    @media($medium)
+        margin: $atom
+        width: ($columns - 2) * $atom
+.row
+    display: flex
+    justify-content: center
+//</контейнеры>
+//<блоки>
+.circle
+    position: relative
+    border-radius: 20vw
+    width: 5em
+    height: 5em
+    margin-bottom: $atom/2
+    background: $light_grey
+    border: .5px solid $grey
+    &__icon
+        display: block
+        height: 50%
+        margin: 25% auto
+    &::after
+        position: absolute
+        top: -10%
+        left: -10%
+        right: -10%
+        bottom: -10%
+        border: .5px solid $blue
+        border-radius: inherit
+        background: white
+        z-index: -1
+        content: ""
+.image
+    width: 100%
+.title
+    font-size: 1.75em
+    padding: 0 5em
+    line-height: 1.5em
+    text-align: center
+    &__bold
+        font-weight: bold
+    @media($medium)
+        padding: 0
+.nav
+    color: $blue
+    &__item
+        margin: 0 1em
+        &:hover
+           text-decoration: unset 
+        &.--active
+            font-family: Exo2Bold
+            text-decoration: unset
+.carousel
+    margin-top: $atom
+    &__header
+        display: flex
+        justify-content: center
+    &__main
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: $atom
+    &__arrow
+        position: relative
+        font-size: 2 * $atom
+        cursor: pointer
+        user-select: none
+        &.--left
+            &::after
+                position: absolute
+                content: "〈"
+                top: 0
+                left: 2px
+                color: white
+        &.--right
+            &::after
+                position: absolute
+                content: "〉"
+                top: 0
+                left: -2px
+                color: white
+    &__container
+        display: flex
+        width: 20 * $atom
+        overflow-x: hidden
+        @media($medium)
+            width: 30 * $atom
+    &__element
+        position: relative
+        flex-basis: 100%
+        min-width: 100%
+        max-width: 100%
+        overflow: hidden
+.characteristic
+    position: absolute
+    width: 2vw
+    height: 2vw
+    z-index: 1
+    cursor: pointer
+    &__circle
+        width: 1.75vw
+        height: 1.75vw
+        background: $red
+        &::after
+            border: .5px solid $red
+            top: -14%
+            left: -14%
+            right: -14%
+            bottom: -14%
+    &__icon
+        filter: brightness(0) invert(1)
+    &__text
+        display: none
+        position: absolute
+        border: 1px solid $blue
+        top: 50%
+        left: 50%
+        background: white
+        z-index: -1
+        padding: .75vw
+        white-space: nowrap
+        color: $grey
+        &.--right
+            left: auto
+            right: 50%
+    &__value
+        color: $blue
+        font-family: Exo2Bold
+    &:hover
+        z-index: 2
+        .characteristic__circle
+            background: $blue
+            &::after
+                border-color: $blue
+        .characteristic__text
+            display: block
+    &.--n
+        &1
+            top: 34%
+            left: 8%
+        &2
+            top: 60%
+            left: 37%
+        &3
+            top: 45%
+            left: 39%
+        &4
+            top: 32%
+            left: 57%
+        &5
+            top: 67%
+            left: 62%
+        &6
+            top: 66%
+            left: 75.5%
+        &7
+            top: 80%
+            left: 90%
+.advantage
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 15em
+    margin: $atom
+    &__circle
+    &__icon
+    &__text
+        text-align: center
+        font-size: 1.15em
+        line-height: 1.5em
+.button
+    position: relative
+    text-transform: uppercase
+    color: white
+    background: $red
+    display: inline-block
+    font-size: 1.75em
+    padding: .3em 1.25em
+    border-radius: 10px
+    border: 2px solid white
+    cursor: pointer
+    user-select: none
+    &::after
+        position: absolute
+        top: -6px
+        left: -6px
+        right: -6px
+        bottom: -6px
+        background: $red
+        content: ""
+        z-index: -1
+        border-radius: inherit
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: white
+    margin: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    border-radius: 1em
+    width: 15em
+    height: 5em
+    padding: 1em
+    z-index: 2
+    border: 2px solid
+    &.--succes
+        color: green
+    &.--failure
+        color: $red
+//</блоки>
