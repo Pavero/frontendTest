@@ -26,17 +26,29 @@ if(blockName) {
 
         let filePath = dirPath + blockName + '.' + extention;
         let fileContent = '';
-        let styleFileImport = '';
+        let fileImport = '';
 
         if(extention == 'styl') {
-          styleFileImport = '@import "../blocks/' + blockName + '/' + blockName + '"';
-          fileContent = '.' + blockName;
+          fileImport = '@import "../blocks/' + blockName + '/' + blockName + '"';
+          fileContent = '// .' + blockName;
 
-          fs.appendFile('src/styles/style.styl', styleFileImport, function (err) {
+          fs.appendFile('src/styles/style.styl', fileImport + '\n', function (err) {
             if(err) {
               return console.log('style.styl НЕ обновлён: ' + err);
             }
             console.log('style.styl обновлён');
+          });
+        }
+
+        if(extention == 'pug') {
+          fileImport = 'include ../blocks/' + blockName + '/' + blockName;
+          fileContent = 'mixin ' + blockName + '()\n  .' + blockName + '&attributes(attributes)';
+
+          fs.appendFile('src/templates/blocks.pug', fileImport + '\n', function (err) {
+            if(err) {
+              return console.log('blocks.pug НЕ обновлён: ' + err);
+            }
+            console.log('blocks.pug обновлён');
           });
         }
 

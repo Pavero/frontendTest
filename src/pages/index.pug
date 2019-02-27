@@ -5,12 +5,28 @@ block head
   link(rel="preload", href="fonts/Exo2Bold.woff", as="font")
 
 block content
-  include ../blocks/header/header
 
-  main
+  main.libra
     h1.visually-hidden Магазин MarketDrive
-    include ../blocks/libra/libra
+    p.libra__tagline
+      b Цифровые
+      |  автомобильные весы НПП “МЕТРА” на 100% защищают вашу прибыль от потерь
+    +menu().libra__menu.js-menu
+    .libra__slider.js-slider
+      +specifications().libra__item
+      .libra__item
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .libra__item
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .libra__item
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    ul.libra__advantages
+      li.libra__advantages-item.libra__advantages-item--installation
+        | Монтаж <br> осуществляется <br> в течение 1 дня
+      li.libra__advantages-item.libra__advantages-item--temperature
+        | Работа при темпаратурах <br> от -30 до +40 <br> градусов по цельсию
+      li.libra__advantages-item.libra__advantages-item--lightning
+        | Каждый датчик <br> имеет специальную плату, обеспечивающую грозозащиту
+    button.libra__btn.btn.js-btn(type="button") Получить расчет
 
-  include ../blocks/footer/footer
-
-  include ../blocks/modal/modal
+  +modal().fixed-center

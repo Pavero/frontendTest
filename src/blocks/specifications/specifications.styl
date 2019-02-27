@@ -21,10 +21,12 @@
 
   &__item
     position absolute
-    top 0
-    left 0
 
     outline none
+
+    &:hover,
+    &:focus
+      z-index 100
 
     &--pos-mod1
       top 36%
@@ -53,6 +55,14 @@
     &--pos-mod7
       top 81.97%
       left 92.27%
+
+    &--pos-right
+      left auto
+      right 7.73%
+
+      .specifications__mark
+        left auto
+        right -25px
 
   &__mark
     position absolute

@@ -1,8 +1,10 @@
-li.menu__item
-  a.menu__link.menu__link--active.js-menu-link(href="#") Технические характеристики
-li.menu__item
-  a.menu__link.js-menu-link(href="#") Весь модельный ряд
-li.menu__item
-  a.menu__link.js-menu-link(href="#") Комплектность поставки
-li.menu__item
-  a.menu__link.js-menu-link(href="#") Сертификация
+mixin menu()
+  ul.menu&attributes(attributes)
+    li.menu__item
+      a.menu__link.menu__link--active(href="#") Технические характеристики
+    li.menu__item
+      a.menu__link(href="#") Весь модельный ряд
+    li.menu__item
+      a.menu__link(href="#") Комплектность поставки
+    li.menu__item
+      a.menu__link(href="#") Сертификация

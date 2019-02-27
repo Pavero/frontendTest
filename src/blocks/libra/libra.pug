@@ -1,17 +1,2 @@
-section.libra.container
-  h2.visually-hidden Автомобильные весы НПП “МЕТРА”
-  p.libra__tagline
-    b Цифровые
-    |  автомобильные весы НПП “МЕТРА” на 100% защищают вашу прибыль от потерь
-  ul.libra__menu.menu
-    include ../menu/menu
-  .libra__slider.slider
-    include ../slider/slider
-  ul.libra__advantages
-    li.libra__advantages-item.libra__advantages-item--installation
-      | Монтаж <br> осуществляется <br> в течение 1 дня
-    li.libra__advantages-item.libra__advantages-item--temperature
-      | Работа при темпаратурах <br> от -30 до +40 <br> градусов по цельсию
-    li.libra__advantages-item.libra__advantages-item--lightning
-      | Каждый датчик <br> имеет специальную плату, обеспечивающую грозозащиту
-  button.libra__btn.btn.js-btn(type="button") Получить расчет
+mixin libra()
+  .libra&attributes(attributes)
